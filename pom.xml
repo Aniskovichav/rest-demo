@@ -24,7 +24,19 @@
   <packaging>war</packaging>
 
   <name>rest-demo</name>
-  <groupId>org.example</groupId>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>7</source>
+                    <target>7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <groupId>org.example</groupId>
   <artifactId>rest-demo</artifactId>
   <version>1.0-SNAPSHOT</version>
 
@@ -49,22 +61,40 @@
 <!--  </build>-->
 
   <dependencies>
-    <dependency>
-      <groupId>com.sun.jersey</groupId>
-      <artifactId>jersey-client</artifactId>
-      <version>1.19.4</version>
+<!--    <dependency>-->
+<!--      <groupId>com.sun.jersey</groupId>-->
+<!--      <artifactId>jersey-client</artifactId>-->
+<!--      <version>1.19.4</version>-->
+<!--    </dependency>-->
+<!--    &lt;!&ndash; https://mvnrepository.com/artifact/com.sun.jersey/jersey-servlet &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>com.sun.jersey</groupId>-->
+<!--      <artifactId>jersey-servlet</artifactId>-->
+<!--      <version>1.19.4</version>-->
+<!--    </dependency>-->
+<!--    &lt;!&ndash; https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>javax.ws.rs</groupId>-->
+<!--      <artifactId>javax.ws.rs-api</artifactId>-->
+<!--      <version>2.1.1</version>-->
+<!--    </dependency>-->
+
+      <dependency>
+      <groupId>org.glassfish.jersey.core</groupId>
+      <artifactId>jersey-server</artifactId>
+      <version>2.17</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/com.sun.jersey/jersey-servlet -->
+
     <dependency>
-      <groupId>com.sun.jersey</groupId>
-      <artifactId>jersey-servlet</artifactId>
-      <version>1.19.4</version>
+      <groupId>org.glassfish.jersey.containers</groupId>
+      <artifactId>jersey-container-servlet-core</artifactId>
+      <version>2.17</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
+
     <dependency>
-      <groupId>javax.ws.rs</groupId>
-      <artifactId>javax.ws.rs-api</artifactId>
-      <version>2.1.1</version>
+      <groupId>org.glassfish.jersey.media</groupId>
+      <artifactId>jersey-media-moxy</artifactId>
+      <version>2.17</version>
     </dependency>
     <dependency>
       <groupId>org.apache.cxf</groupId>
@@ -76,6 +106,12 @@
       <groupId>org.apache.cxf</groupId>
       <artifactId>cxf-bundle</artifactId>
       <version>3.0.0-milestone2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.24</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
 
