@@ -44,4 +44,11 @@ public class PersonService {
         int index = new Random().nextInt(data.size());
        return Response.ok(data.get(index)).build();
     }
+
+    @GET
+    @Path("/all")
+    @Produces({MediaType.APPLICATION_XML })
+    public Response all() {
+        return Response.ok(data).build();
+    }
 }
