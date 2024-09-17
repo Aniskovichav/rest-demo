@@ -31,7 +31,6 @@ public class HelloService {
 
         Employee e1 = new Employee();
         e1.setName("James");
-        e1.setRole("Admin");
         e1.setInsertTime(new Date());
         employeeDao.create(e1);
 
