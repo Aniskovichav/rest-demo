@@ -1,7 +1,9 @@
 package org.example.utils;
 
 
+import org.example.entity.Currency;
 import org.example.entity.Employee;
+import org.example.entity.Employees;
 import org.example.entity.Role;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
@@ -36,6 +38,7 @@ public class HibernateAnnotationUtil {
         Metadata metadata = new MetadataSources(serviceRegistry)
                 .addAnnotatedClass(Employee.class)
                 .addAnnotatedClass(Role.class)
+                .addAnnotatedClass(Currency.class)
                 .buildMetadata();
 
         //EntityManagerFactory factory = EntityManagerFactory
@@ -51,7 +54,7 @@ public class HibernateAnnotationUtil {
         dbSettings.put(Environment.DRIVER, "com.mysql.jdbc.Driver");
         dbSettings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
         dbSettings.put(Environment.SHOW_SQL, "true");
-        dbSettings.put(Environment.HBM2DDL_AUTO, "update"); //update create
+        dbSettings.put(Environment.HBM2DDL_AUTO, "create"); //update create
         return dbSettings;
     }
 

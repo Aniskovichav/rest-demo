@@ -3,6 +3,7 @@ package org.example;
 import org.example.dao.EmployeeDao;
 import org.example.db.JPAService;
 import org.example.entity.Employee;
+import org.example.entity.Employees;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -44,7 +45,7 @@ public class EmplService {
     @Path("/create")
     @Consumes(MediaType.APPLICATION_XML)
     public Response create(Employee employee){
-        employeeDao.create(employee);
+        //employeeDao.create(employee);
         try {
             employeeDao.create(employee);
             return Response.status(200).entity("Employee successfully created").build();
@@ -53,5 +54,32 @@ public class EmplService {
             return Response.status(400).entity("Employee NOT created").build();
         }
     }
+
+    @POST
+    @Path("/create-all")
+    @Consumes(MediaType.APPLICATION_XML)
+    public Response create(Employees employees){
+        try {
+            employeeDao.create(employees.getEmployees());
+            return Response.status(200).entity("Employees successfully created").build();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Response.status(400).entity("Employees NOT created").build();
+        }
+    }
+
+    @PUT
+    @Path("/update")
+    @Consumes(MediaType.APPLICATION_XML)
+    public Response update(Employee employee){
+        try {
+            employeeDao.update(employee);
+            return Response.status(200).entity("Employee successfully updated").build();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Response.status(400).entity("Employee NOT updated").build();
+        }
+    }
+
 
 }
