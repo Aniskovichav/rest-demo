@@ -10,15 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8676930-0d28-4e24-a892-0e57f17d7577" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/RateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/CurrencyDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Currencies.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Currency.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Employees.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/EmplService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/EmplService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/HibernateAnnotationUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/HibernateAnnotationUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Currency.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +189,7 @@
       <updated>1725986521228</updated>
       <workItem from="1725986523653" duration="6803000" />
       <workItem from="1726588642647" duration="10171000" />
-      <workItem from="1726761289927" duration="7849000" />
+      <workItem from="1726761289927" duration="8530000" />
     </task>
     <task id="LOCAL-00001" summary="create rest project">
       <created>1725986741223</created>
@@ -247,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1726598933819</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add entity Currency">
+      <created>1726770306195</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1726770306195</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +256,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create rest project" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="add entity Currency" />
+    <option name="LAST_COMMIT_MESSAGE" value="add entity Currency" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
